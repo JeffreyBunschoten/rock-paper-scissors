@@ -1,0 +1,54 @@
+// Step 1: some welcome text
+// Welcome to Rock, paper, scissors
+// 
+// How to play: Try to guess the computers move and defeat them.
+// 
+// Rock:
+// Rock beats scissors and loses to paper.
+// This powerful play is strong enough to break the fragile scissors, but can’t 
+// fight its way past the paper, which wraps itself around the rock to suffocate it.
+// 
+// Paper:
+// Scissors beat paper but loses to rock. 
+// The sharp scissors carve through paper with ease, but they’re too weak 
+// to stand up to a rock slamming into them.
+// 
+// Scissors:
+// Paper beats rock, but loses to scissors. 
+// The slick and flexible paper wraps around the rock 
+// to lock it down, but it can’t fight back against the sharp scissors.
+// 
+// 
+// Step 2: Playing a round
+// Ask the user for an input, type rock, paper or scissors
+// Randomly choose rock, paper or scissors for the computer
+// 
+// Show the players output
+// Show the computer output
+// 
+// if the user entry equals the computers entry:
+//      It's a tie, play again.
+// 
+// if the user entered rock and the computer answered paper:
+//      You lose.. Paper "covers" Rock.
+// if the user entered rock and the computer answered scissors:
+//      You win! Rock "crushes" Scissors.
+// 
+// if the user entered paper and the computer answered rock:
+//      You win! Paper "covers" Rock.
+// if the user entered paper and the computer answered scissors:
+//      You lose.. Paper is "cut" by Scissors
+// 
+// if the user entered scissors and the computer answered rock:
+//      You lose.. Rock "crushes" Scissors.
+// if the user entered scissors and the computer answered paper:
+//      You win! Paper is "cut" by Scissors
+// 
+// 
+// 
+// 
+// 
+
+// 
+// 
+
