@@ -1,11 +1,10 @@
 function welcome() {
-let numberOfRounds = 
-        prompt(`
-    How many rounds would you like to play?
-    (Please provide a number)
-        `)
+    let numberOfRounds = prompt(`
+        How many rounds would you like to play?
+        (Please provide a number)
+            `)
 
-    return parseInt(numberOfRounds)
+        return parseInt(numberOfRounds)
 }
 
 
@@ -47,48 +46,53 @@ function play() {
     let computerPoints = 0
 
     while (currentRound != rounds) {
-    // Round 1
-    currentRound = currentRound + 1
-    
-    // Ask the user for an input, type rock, paper or scissors
-        let userChoice = user()
-
-    // Randomly choose rock, paper or scissors for the computer
-    const computerChoice = computerRandom()
-
-    // Inform the user of the rounds remaining and the choices made
-    console.log(`Round ${currentRound} of ${rounds}.`)
-    console.log(`Your choice is: ${userChoice}`)
-    console.log(`Your opponents choice is: ${computerChoice}`)
-
-    if (userChoice == computerChoice) {
-        console.log(" It's a tie, play again.")
-        currentRound = currentRound - 1
-
-    } else if (userChoice == "Rock" && computerChoice == "Paper") {
-        console.log(" You lose.. Paper 'covers' Rock.")
-        computerPoints = computerPoints + 1
-    } else if (userChoice == "Rock" && computerChoice == "Scissors") {
-        console.log(" You win! Rock 'crushes' Scissors.")
-        userPoints = userPoints + 1
-
-    } else if (userChoice == "Paper" && computerChoice == "Rock") {
-        console.log(" You win! Paper 'covers' Rock.")
-        userPoints = userPoints + 1
-    } else if (userChoice == "Paper" && computerChoice == "Scissors") {
-        console.log(" You lose.. Paper is 'cut' by Scissors")
-        computerPoints = computerPoints + 1
-    
-    } else if (userChoice == "Scissors" && computerChoice == "Rock") {
-        console.log(" You lose.. Rock 'crushes' Scissors")
-        computerPoints = computerPoints + 1
-    } else if (userChoice == "Scissors" && computerChoice == "Paper") {
-        console.log(" You win! Paper is 'cut' by Scissors")
-        userPoints = userPoints + 1
-    }        
+        // Round 1
+        currentRound = currentRound + 1
         
-    console.log(`your current points are: ${userPoints}`)
-    console.log(`the computers points are: ${computerPoints}`)
+        // Ask the user for an input, type rock, paper or scissors
+            let userChoice = user()
+
+        // Randomly choose rock, paper or scissors for the computer
+        const computerChoice = computerRandom()
+
+        // Inform the user of the rounds remaining and the choices made
+        console.log(`Round ${currentRound} of ${rounds}.`)
+        console.log(`Your choice is: ${userChoice}`)
+        console.log(`Your opponents choice is: ${computerChoice}`)
+
+        // Game logic is being done here 
+        if (userChoice == computerChoice) {
+            console.log(" It's a tie, play again.")
+            currentRound = currentRound - 1
+
+        } else if (userChoice == "Rock" && computerChoice == "Paper") {
+            console.log(" You lose.. Paper 'covers' Rock.")
+            computerPoints = computerPoints + 1
+        } else if (userChoice == "Rock" && computerChoice == "Scissors") {
+            console.log(" You win! Rock 'crushes' Scissors.")
+            userPoints = userPoints + 1
+
+        } else if (userChoice == "Paper" && computerChoice == "Rock") {
+            console.log(" You win! Paper 'covers' Rock.")
+            userPoints = userPoints + 1
+        } else if (userChoice == "Paper" && computerChoice == "Scissors") {
+            console.log(" You lose.. Paper is 'cut' by Scissors")
+            computerPoints = computerPoints + 1
+        
+        } else if (userChoice == "Scissors" && computerChoice == "Rock") {
+            console.log(" You lose.. Rock 'crushes' Scissors")
+            computerPoints = computerPoints + 1
+        } else if (userChoice == "Scissors" && computerChoice == "Paper") {
+            console.log(" You win! Paper is 'cut' by Scissors")
+            userPoints = userPoints + 1
+        }        
+    }
+    console.log(`Your points are: ${userPoints}`)
+    console.log(`The computers points are: ${computerPoints}`)
+    if (userPoints > computerPoints) {
+        console.log("Awesome, you have won!")
+    } else {
+        console.log("Awww, you have lost..")
     }
 }
 
