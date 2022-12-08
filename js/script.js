@@ -1,30 +1,11 @@
 function welcome() {
 let numberOfRounds = 
         prompt(`
-    Welcome to Rock, Paper, Scissors
-
-    How to play: Try to guess the computers move and defeat them.
-
-    Rock:
-    Rock beats scissors and loses to paper.
-    This powerful play is strong enough to break the fragile scissors, but can't 
-    fight its way past the paper, which wraps itself around the rock to suffocate it.
-
-    Paper:
-    Scissors beat paper but loses to rock. 
-    The sharp scissors carve through paper with ease, but they're too weak 
-    to stand up to a rock slamming into them.
-
-    Scissors:
-    Paper beats rock, but loses to scissors. 
-    The slick and flexible paper wraps around the rock 
-    to lock it down, but it can't fight back against the sharp scissors.
-
     How many rounds would you like to play?
-    (1, 3 or 5)
+    (Please provide a number)
         `)
 
-    return numberOfRounds
+    return parseInt(numberOfRounds)
 }
 
 
@@ -38,7 +19,12 @@ function user() {
     // Prettify the users input to first letter Capital
     let userChoiceLower = userChoice.toLowerCase()
     let capitalizeFirstLetter = userChoiceLower.charAt(0).toUpperCase() + userChoiceLower.slice(1)
-    return capitalizeFirstLetter
+    if (capitalizeFirstLetter == "Rock" || capitalizeFirstLetter == "Scissors" || capitalizeFirstLetter == "Paper") {
+        return capitalizeFirstLetter
+    } else {
+        console.log("Please enter one of three choices: Rock, Paper or Scissors.")
+        return false
+    }
 }
 
 
@@ -52,37 +38,58 @@ function computerRandom() {
     return randomItem
 }
 
-function gameLogic(userChoice, computerChoice) {
-    if (userChoice)
-
-    if (userChoice == computerChoice) {
-        console.log("it's a tie, play again.")
-        } else if (condition2) {
-          //  block of code to be executed if the condition1 is false and condition2 is true
-        } else {
-          //  block of code to be executed if the condition1 is false and condition2 is false
-        }
-
-}
-
 
 function play() {
     // Show the user the game rules and let them enter number of rounds
     let rounds = welcome()
-    let roundsRemaining = rounds
+    let currentRound = 0
+    let userPoints = 0
+    let computerPoints = 0
 
+    while (currentRound != rounds) {
+    // Round 1
+    currentRound = currentRound + 1
+    
     // Ask the user for an input, type rock, paper or scissors
-    let userChoice = user()
+        let userChoice = user()
 
     // Randomly choose rock, paper or scissors for the computer
     const computerChoice = computerRandom()
 
     // Inform the user of the rounds remaining and the choices made
-    console.log(`Round ${roundsRemaining} of ${rounds}.`)
+    console.log(`Round ${currentRound} of ${rounds}.`)
     console.log(`Your choice is: ${userChoice}`)
     console.log(`Your opponents choice is: ${computerChoice}`)
 
-    let outcome = gameLogic(userChoice, computerChoice)
+    if (userChoice == computerChoice) {
+        console.log(" It's a tie, play again.")
+        currentRound = currentRound - 1
+
+    } else if (userChoice == "Rock" && computerChoice == "Paper") {
+        console.log(" You lose.. Paper 'covers' Rock.")
+        computerPoints = computerPoints + 1
+    } else if (userChoice == "Rock" && computerChoice == "Scissors") {
+        console.log(" You win! Rock 'crushes' Scissors.")
+        userPoints = userPoints + 1
+
+    } else if (userChoice == "Paper" && computerChoice == "Rock") {
+        console.log(" You win! Paper 'covers' Rock.")
+        userPoints = userPoints + 1
+    } else if (userChoice == "Paper" && computerChoice == "Scissors") {
+        console.log(" You lose.. Paper is 'cut' by Scissors")
+        computerPoints = computerPoints + 1
+    
+    } else if (userChoice == "Scissors" && computerChoice == "Rock") {
+        console.log(" You lose.. Rock 'crushes' Scissors")
+        computerPoints = computerPoints + 1
+    } else if (userChoice == "Scissors" && computerChoice == "Paper") {
+        console.log(" You win! Paper is 'cut' by Scissors")
+        userPoints = userPoints + 1
+    }        
+        
+    console.log(`your current points are: ${userPoints}`)
+    console.log(`the computers points are: ${computerPoints}`)
+    }
 }
 
 
