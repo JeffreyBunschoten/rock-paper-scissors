@@ -12,15 +12,15 @@ Things You Should Know
 Method 1
 Hand Signals and Rules
 
-    Image titled Play Rock, Paper, Scissors Step 1
+    Play Rock, Paper, Scissors Step 1
 
     Rock beats scissors and loses to paper. Make a closed fist to throw a rock out. This powerful play is strong enough to break the fragile scissors, but can’t fight its way past the paper, which wraps itself around the rock to suffocate it.[1]
         Don’t tuck your thumb when you throw rock. You may telegraph your move, and a loose fist with the thumb inside can be mistaken for paper.
-    Image titled Play Rock, Paper, Scissors Step 2
+    Play Rock, Paper, Scissors Step 2
 
     Scissors beat paper but loses to rock. Play scissors by making a peace sign with your index and middle finger. The sharp scissors carve through paper with ease, but they’re too weak to stand up to a rock slamming into them.[2]
         Keep your scissors vertical. Laying your fingers flat looks too much like paper.
-    Image titled Play Rock, Paper, Scissors Step 3
+    Play Rock, Paper, Scissors Step 3
 
     Paper beats rock, but loses to scissors. Lay your fingers flat and keep them together to play paper. The slick and flexible paper wraps around the rock to lock it down, but it can’t fight back against the sharp scissors.[3]
         Keep your fingers touching when you play paper. If you spread them out, people might accuse you of playing scissors.
